@@ -1,0 +1,78 @@
+/* GroupChat.css */
+.group-chat {
+    display: flex;
+    flex-direction: column;
+    height: 400px; /* Adjust based on your preference */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.messages {
+    overflow-y: auto;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.message {
+    background-color: #e7f3ff;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #d0e2ff;
+}
+
+.send-message-form {
+    display: flex;
+    gap: 10px; /* Ensures spacing between form elements */
+    align-items: center;
+}
+
+.send-message-form input,
+.send-message-form select {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 10px; /* Ensures spacing between input/select and the button */
+}
+
+.send-message-form select {
+    max-width: 200px; /* Prevents select from taking too much space */
+    flex-grow: 0; /* Prevents select from growing like the input field */
+}
+
+.send-message-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-grow: 0; /* Prevents button from growing */
+}
+
+.send-message-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+    .group-chat {
+        padding: 5px;
+    }
+    .send-message-form {
+        flex-direction: column;
+    }
+    .send-message-form input,
+    .send-message-form select,
+    .send-message-form button {
+        margin-right: 0;
+        margin-bottom: 10px; /* Adds spacing between stacked form elements */
+    }
+    .send-message-form select {
+        max-width: none; /* Allows select to fill width on small screens */
+    }
+}
